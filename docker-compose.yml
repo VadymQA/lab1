@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - "80:80"
+  check_status:
+    build:
+      context: .
+      dockerfile: DockerfileV
+    volumes:
+      - ./status_check.log:/app/status_check.log
