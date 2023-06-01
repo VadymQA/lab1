@@ -7,6 +7,6 @@ services:
   check_status:
     build:
       context: .
-      dockerfile: DockerfileV
+      dockerfile: Dockerfile
     volumes:
       - ./status_check.log:/app/status_check.log
